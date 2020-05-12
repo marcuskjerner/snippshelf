@@ -1,4 +1,4 @@
-## Assignment 2 - SnippShelf
+## SnippShelf
 
 ### Instructions.
 ---
