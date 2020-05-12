@@ -15,4 +15,4 @@ _To run on your own MongoDB instance:_
 
 ### Preview
 
-A running version of the Application can be found at [snippshelf.herokuapp.com](https://snippshelf.herokuapp.com/).
+A running version of the Application can be found at [snippshelf.herokuapp.com](https://snippshelf.herokuapp.com/). (The database will reset every 24 hour.)
