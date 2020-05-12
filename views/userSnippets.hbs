@@ -1,0 +1,26 @@
+<div class="title-section pb-4 pt-5">
+  <div class="container row">
+    <div class="col-12 col-md-10 offset-md-1">
+      <h4 class="mb-0">{{ session.username }} Snippets</h4>
+      <div class="container">
+        <table class="table mt-5">
+          <tbody>
+            {{#each this.snippets }}
+              <tr>
+                <td>{{ this.description }}</td>
+                <td>{{formatSimple this.createdAt }}</td>
+                <td class="row">
+                  <a href="/snippets/snippet/update/{{this._id}}" class="btn col-5 p-0 m-0 mr-2"><i class="fa fa-pen"></i></a>
+                  <form method="DELETE" action="/snippets/snippet/delete/{{this._id}}">
+                    <button type="submit" class="btn col-5  p-0 m-0"><i class="fa fa-trash"></i></a>
+                  </form>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+</div>

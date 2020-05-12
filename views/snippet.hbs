@@ -1,0 +1,14 @@
+<div class="title-section pt-5 pb-4 px-5">
+  <div class="container row x-auto">
+    <div class="col-8 mx-auto offset-1">
+      <h4 class="mb-0">{{snippets.[0].description}}</h4>
+      <p class="text-muted">{{snippets.[0].slug}}</p>
+    </div>
+    <div class="col-4 mt-2 text-right">
+      <p>{{formatCalendar snippets.[0].createdAt}}</p>
+    </div>
+    <code class="snippetCodeArea col-12 col-md-8 offset-md-2 mt-3">
+    {{snippets.[0].snippet}}
+    </code>
+  </div>
+</div>

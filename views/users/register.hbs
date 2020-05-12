@@ -1,0 +1,10 @@
+{{#if session.userId}}
+  <div class="col-12 col-md-8 offset-md-2 text-center mt-5">
+    <h5>Please log out to register a new User</h5>
+    <form action="/users/logout" method="POST" autocomplete="off" class="pt-4">
+        <button type="submit" class="btn btn-sm btn-outline-secondary">Logout</button>
+    </form>
+  </div>
+{{else}}
+  {{> registration/registration-form}}
+{{/if}}

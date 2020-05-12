@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head/head-block }}
+  <body>
+    <div class="d-flex flex-column sticky-footer-wrapper">
+
+      {{> nav/nav-block }}
+      {{> errors/error-alert }}
+      <main role="main" class="flex-fill container col-12 col-md-8 mx-auto">
+        {{{body}}}
+      </main>
+
+      {{> footer/footer-block}}
+
+    </div>
+  </body>
+  </html>

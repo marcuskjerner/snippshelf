@@ -1,0 +1,19 @@
+<div class="title-section pt-5 pb-4 px-5">
+  {{#if text}}
+  <p>{{text}}</p>
+  {{/if}}
+</div>
+<div class="album">
+  <div class="container">
+  <h4 class="pb-2">Welcome to <span class="text-danger"><i class="fa fa-code"></i><b>SNIPPSHELF</b></span>, a place to store & share your snippets. </h4>
+  <h5 class="pt-5">Latest Snippets</h5>
+  <div class="container row mt-4">
+    {{#if snippets}}
+      {{#each snippets}}
+        {{> snippets/snippet-card this}}
+      {{/each}}
+    {{else}}
+      <h5 class="pt-5 mt-1 text-muted col-md-8 col-12">Nothing here yet. Be the first to add a snippet.</h5>
+    {{/if}}
+  </div>             
+</div>

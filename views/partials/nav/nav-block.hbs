@@ -1,0 +1,59 @@
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        {{#if session.userId}}
+          <div class="col-12 col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">Welcome {{ session.username }}</h4>
+          </div>
+          <div class="col-12 col-sm-4 offset-0 offset-md-1 py-4">
+            <form action="/users/logout" method="POST" autocomplete="off" class="pt-4">
+                <button type="submit" class="btn btn-sm btn-outline-secondary float-right">Logout</button>
+            </form>
+          {{else}} <!-- NO USER LOGGED IN --> 
+            <div class="col-12 col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">User Info</h4>
+            </div>
+            <div class="col-12 col-sm-4 offset-0 offset-md-1 py-4">
+              <h4 class="text-white">Log in</h4>
+              <form action="/users/login" method="POST" autocomplete="off" class="pt-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-sm btn-outline-secondary">login</button>
+                <a href="/users/register" class="btn btn-sm btn-outline-secondary">Register</a>
+            </form>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="/" class="navbar-brand d-flex justify-content-center align-items-center">
+        <span class="fa fa-code mr-2"></span>
+        <strong>snippshelf</strong>
+      </a>
+
+      <div class="row d-flex justify-content-between">
+        <div class="pt-2 pb-1 mr-3 ml-2">
+          <a href="/snippets" class="text-white">Snippets</a>
+        </div>
+        {{#if session.userId}}
+          <div class="pt-2 pb-2 mr-3">
+            <a href="/snippets/new" class="text-white">Add Snippet</a>
+          </div>
+          <div class="pt-2 pb-2 mr-3">
+            <a href="/users/{{session.username}}/snippets" class="text-white">My Snippets</a>
+          </div>
+        {{/if}}
+        <button class="login-button" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-user p-1 text-white"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

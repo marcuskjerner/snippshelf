@@ -1,0 +1,29 @@
+<div class="title-section pt-5 pb-4 px-5">
+  <form class="form" method="POST" action="/snippets/snippet/update/{{ this.snippets.[0]._id }}">
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-5 font-weight-normal">Edit Snippet</h1>
+  </div>
+    <div class="container row">
+      <div class="col-md-4 col-12">
+        <div class="form-label-group">
+          <input type="text" name="description" class="form-control" placeholder="Title" value="{{ this.snippets.[0].description }}" required autofocus>
+          <label for="description">Title</label>
+        </div>
+
+        <div class="form-label-group">
+          <input type="text" name="tags" class="form-control" placeholder="#tags" value="{{ this.snippets.[0].tags }}"required>
+          <label for="inputEmail">#tags</label>
+        </div>
+      </div>
+      <div class="col-md-7 col-12">
+        <div class="form-label-group snippetTextArea">
+          <textarea class="form-control" id="snippetTextArea" name="snippetTextArea" rows="10">{{ this.snippets.[0].snippet }}</textarea>
+        </div>
+        <input type="text" name="author" value="{{this.session.userId}}" class="hidden" style="visibility: hidden;" placeholder="#tags" required>
+        <div class="buttons float-right">
+          <button class="btn btn-outline-primary btn-sm" type="submit">Save</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

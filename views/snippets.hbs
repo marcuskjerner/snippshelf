@@ -1,0 +1,11 @@
+<div class="title-section pt-5 pb-4 px-5">
+</div>
+<div class="album">
+  <div class="container">
+    {{!-- > search/search-field --}}
+  <div class="row mt-1 pb-5">
+    {{#each snippets}}
+      {{> snippets/snippet-card this}}
+    {{/each}}
+  </div>             
+</div>
